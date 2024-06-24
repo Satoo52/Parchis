@@ -28,6 +28,13 @@ body {
     #board {
         width: 95%;
     }
+
+    .ficha {
+        width: 50%;
+        height: 50%;
+        right: 25%;
+        top: 25%;
+    }
 }
 
 .red { background-color: red; }
@@ -55,6 +62,7 @@ button {
     color: black;
     position: relative; /* Añadido para alinear correctamente las fichas */
 }
+
 
 /* Cambiar color específico */
 #board > div:nth-child(17n+9),
