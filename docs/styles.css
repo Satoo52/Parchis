@@ -34,6 +34,18 @@ body {
     background-color: yellow;
 }
 
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
 /* Numerar casillas seguras */
 .safe::after {
     content: attr(data-number);
@@ -44,8 +56,11 @@ body {
     color: black;
 }
 
-/* Solo las casillas amarillas deben aparecer */
-.yellow {
+/* Mostrar solo las casillas en las esquinas */
+#board > div:nth-child(1),
+#board > div:nth-child(17),
+#board > div:nth-child(289),
+#board > div:nth-child(273) {
     display: block;
 }
 
