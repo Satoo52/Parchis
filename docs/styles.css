@@ -64,11 +64,6 @@ body {
     display: block;
 }
 
-/* Ocultar todas las demás casillas */
-#board > div {
-    display: none;
-}
-
 /* Mostrar los números de las casillas seguras */
 .safe::after {
     display: block;
