@@ -10,8 +10,9 @@ body {
 }
 
 #board {
-    width: 850px; /* Ancho total del tablero ajustado */
-    height: 850px; /* Alto total del tablero ajustado */
+    width: 90%; /* Ancho ajustado para pantallas más pequeñas */
+    max-width: 850px; /* Máximo ancho del tablero */
+    aspect-ratio: 1; /* Proporción cuadrada */
     display: grid;
     grid-template-columns: repeat(17, 1fr); /* 17 columnas */
     grid-template-rows: repeat(17, 1fr); /* 17 filas */
@@ -19,7 +20,23 @@ body {
     background-color: white;
     border: 2px solid black;
     position: relative;
+    overflow: hidden; /* Evitar desbordamiento horizontal en dispositivos pequeños */
 }
+
+/* Ajustes para smartphones*/
+@media (max-width: 768px) {
+    #board {
+        width: 95%;
+    }
+
+    .ficha {
+        width: 50%;
+        height: 50%;
+        right: 25%;
+        top: 25%;
+    }
+}
+
 .red { background-color: red; }
 .green { background-color: green; }
 .yellow { background-color: yellow; }
