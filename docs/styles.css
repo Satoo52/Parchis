@@ -23,7 +23,7 @@ body {
     overflow: hidden; /* Evitar desbordamiento horizontal en dispositivos pequeños */
 }
 
-/* Ajustes para smartphones*/
+/* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
     #board {
         width: 95%;
