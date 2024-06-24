@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Añadir fichas de cada jugador en sus casas
     const players = ['red', 'green', 'yellow', 'blue'];
     const startPositions = {
-        red: [250, 251, 267, 268],
-        green: [2, 3, 19, 20],
-        yellow: [225, 226, 242, 243],
-        blue: [39, 40, 56, 57]
+        red: [247, 248, 264, 265],
+        green: [1, 2, 18, 19],  // Mover más a la derecha y arriba
+        yellow: [272, 273, 288, 289],
+        blue: [119, 120, 136, 137]
     };
 
     players.forEach(player => {
