@@ -73,8 +73,6 @@ button {
     top: 15%; /* Ajuste hacia abajo */
 }
 
-.yellow.ficha { background-color: rgba(255, 255, 0, 0.8); }
-
 /* Cambiar color específico */
 #board > div:nth-child(17n+9),
 #board > div:nth-child(17n+10),
