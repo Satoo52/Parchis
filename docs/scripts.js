@@ -26,33 +26,19 @@ document.addEventListener("DOMContentLoaded", function() {
             // Añadir clases de colores según la disposición solicitada
             if (i < 7 && j < 7) {
                 cells[index].classList.add("yellow");
-            } else if (i < 7 && j > 9) {
-                cells[index].classList.add("blue");
-            } else if (i > 9 && j < 7) {
-                cells[index].classList.add("green");
-            } else if (i > 9 && j > 9) {
-                cells[index].classList.add("red");
             } else if ((i >= 7 && i <= 9) || (j >= 7 && j <= 9)) {
                 cells[index].classList.add("safe");
             }
         }
     }
 
-    // Añadir fichas de cada jugador en sus casas
-    const players = ['red', 'green', 'yellow', 'blue'];
-    const startPositions = {
-        red: [247, 248, 264, 265],
-        green: [1, 2, 18, 19],  // Mover más a la derecha y arriba
-        yellow: [272, 273, 288, 289],
-        blue: [119, 120, 136, 137]
-    };
+    // Añadir fichas amarillas
+    const yellowPositions = [272, 273, 288, 289];
 
-    players.forEach(player => {
-        startPositions[player].forEach(position => {
-            const ficha = document.createElement("div");
-            ficha.classList.add("ficha", player);
-            cells[position].appendChild(ficha);
-        });
+    yellowPositions.forEach(position => {
+        const ficha = document.createElement("div");
+        ficha.classList.add("ficha", "yellow");
+        cells[position].appendChild(ficha);
     });
 
     // Numerar las casillas seguras
