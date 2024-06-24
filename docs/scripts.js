@@ -32,15 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Añadir fichas amarillas
-    const yellowPositions = [272, 273, 288, 289];
-
-    yellowPositions.forEach(position => {
-        const ficha = document.createElement("div");
-        ficha.classList.add("ficha", "yellow");
-        cells[position].appendChild(ficha);
-    });
-
     // Numerar las casillas seguras
     const safeCells = [
         // Fila superior
