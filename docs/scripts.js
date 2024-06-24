@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     rollDiceButton.addEventListener("click", function() {
         const result = Math.floor(Math.random() * 6) + 1;
-        diceResult.textContent = `Resultado del dado: ${result}`;
+        diceResult.textContent = Resultado del dado: ${result};
     });
 
     const board = document.getElementById("board");
