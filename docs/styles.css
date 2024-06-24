@@ -30,38 +30,8 @@ body {
     }
 }
 
-.red { background-color: red; }
-.green { background-color: green; }
-.yellow { background-color: yellow; }
-.blue { background-color: blue; }
-.safe { background-color: lightgray; }
-
-#controls {
-    margin-top: 20px;
-    text-align: center;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.casilla {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    color: black;
-    position: relative; /* Añadido para alinear correctamente las fichas */
-}
-
-/* Cambiar color específico */
-#board > div:nth-child(17n+9),
-#board > div:nth-child(17n+10),
-#board > div:nth-child(17n+11),
-#board > div:nth-child(8*17+1):nth-last-child(-n+10*17) {
-    background-color: white !important; /* Cambia el color de fondo de las columnas y filas centrales a blanco */
+.yellow {
+    background-color: yellow;
 }
 
 /* Numerar casillas seguras */
@@ -72,4 +42,19 @@ button {
     right: 2px;
     font-size: 12px;
     color: black;
+}
+
+/* Solo las casillas amarillas deben aparecer */
+.yellow {
+    display: block;
+}
+
+/* Ocultar todas las demás casillas */
+#board > div {
+    display: none;
+}
+
+/* Mostrar los números de las casillas seguras */
+.safe::after {
+    display: block;
 }
