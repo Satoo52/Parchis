@@ -73,7 +73,10 @@ button {
     top: 15%; /* Ajuste hacia abajo */
 }
 
+.red.ficha { background-color: rgba(255, 0, 0, 0.8); }
+.green.ficha { background-color: rgba(0, 128, 0, 0.8); }
 .yellow.ficha { background-color: rgba(255, 255, 0, 0.8); }
+.blue.ficha { background-color: rgba(0, 0, 255, 0.8); }
 
 /* Cambiar color específico */
 #board > div:nth-child(17n+9),
