@@ -23,7 +23,7 @@ body {
     overflow: hidden; /* Evitar desbordamiento horizontal en dispositivos pequeños */
 }
 
-/* Ajustes para pantallas más pequeñas */
+/* Ajustes para smartphones*/
 @media (max-width: 768px) {
     #board {
         width: 95%;
@@ -63,6 +63,20 @@ button {
     position: relative; /* Añadido para alinear correctamente las fichas */
 }
 
+.ficha {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    opacity: 0.8;
+    position: absolute;
+    right: 15%; /* Ajuste hacia la derecha */
+    top: 15%; /* Ajuste hacia abajo */
+}
+
+.red.ficha { background-color: rgba(255, 0, 0, 0.8); }
+.green.ficha { background-color: rgba(0, 128, 0, 0.8); }
+.yellow.ficha { background-color: rgba(255, 255, 0, 0.8); }
+.blue.ficha { background-color: rgba(0, 0, 255, 0.8); }
 
 /* Cambiar color específico */
 #board > div:nth-child(17n+9),
