@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     rollDiceButton.addEventListener("click", function() {
         const result = Math.floor(Math.random() * 6) + 1;
-        diceResult.textContent = Resultado del dado: ${result};
+        diceResult.textContent = `Resultado del dado: ${result}`;
     });
 
     const board = document.getElementById("board");
@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Añadir fichas de cada jugador en sus casas
     const players = ['red', 'green', 'yellow', 'blue'];
     const startPositions = {
-        red: [247, 248, 264, 265],
-        green: [1, 2, 18, 19],  // Mover más a la derecha y arriba
-        yellow: [272, 273, 288, 289],
-        blue: [119, 120, 136, 137]
+        red: [250, 251, 267, 268],
+        green: [2, 3, 19, 20],
+        yellow: [225, 226, 242, 243],
+        blue: [39, 40, 56, 57]
     };
 
     players.forEach(player => {
