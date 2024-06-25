@@ -15,4 +15,12 @@ document.addEventListener("DOMContentLoaded", function() {
         cell.classList.add("casilla");
         board.appendChild(cell);
     }
+
+    const cells = board.children;
+
+    // Configurar colores de las casas en las esquinas
+    cells[0].classList.add("yellow");  // Esquina superior izquierda
+    cells[16].classList.add("blue");   // Esquina superior derecha
+    cells[272].classList.add("green"); // Esquina inferior izquierda
+    cells[288].classList.add("red");   // Esquina inferior derecha
 });
