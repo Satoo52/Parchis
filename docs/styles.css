@@ -23,10 +23,18 @@ body {
     overflow: hidden; /* Evitar desbordamiento horizontal en dispositivos pequeños */
 }
 
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    #board {
+        width: 95%;
+    }
+}
+
 .red { background-color: red; }
 .green { background-color: green; }
 .yellow { background-color: yellow; }
 .blue { background-color: blue; }
+.safe { background-color: lightgray; }
 
 #controls {
     margin-top: 20px;
@@ -46,4 +54,27 @@ button {
     font-size: 10px;
     color: black;
     position: relative; /* Añadido para alinear correctamente las fichas */
+}
+
+/* Cambiar color específico */
+#board > div:nth-child(17n+9),
+#board > div:nth-child(17n+10),
+#board > div:nth-child(17n+11),
+#board > div:nth-child(8*17+1):nth-last-child(-n+10*17) {
+    background-color: white !important; /* Cambia el color de fondo de las columnas y filas centrales a blanco */
+}
+
+/* Numerar casillas seguras */
+.safe::after {
+    content: attr(data-number);
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 12px;
+    color: black;
+}
+
+/* Eliminar las fichas redondas */
+.ficha {
+    display: none;
 }
