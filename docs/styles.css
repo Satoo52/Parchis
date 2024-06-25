@@ -76,5 +76,5 @@ button {
 
 /* Eliminar las fichas redondas */
 .ficha {
-    display: none;
+    display: none !important; /* Oculta todas las fichas */
 }
