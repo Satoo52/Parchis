@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Comentar o eliminar el código que añade las fichas al tablero
-    /*
+    
     const board = document.getElementById("board");
 
     // Crear el tablero
@@ -33,5 +33,5 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
-    */
+    
 });
