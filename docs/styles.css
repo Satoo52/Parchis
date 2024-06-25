@@ -10,9 +10,8 @@ body {
 }
 
 #board {
-    width: 90%; /* Ancho ajustado para pantallas más pequeñas */
-    max-width: 850px; /* Máximo ancho del tablero */
-    aspect-ratio: 1; /* Proporción cuadrada */
+    width: 90vw; /* Ancho total del tablero ajustado */
+    height: 90vw; /* Alto total del tablero ajustado */
     display: grid;
     grid-template-columns: repeat(17, 1fr); /* 17 columnas */
     grid-template-rows: repeat(17, 1fr); /* 17 filas */
@@ -20,21 +19,6 @@ body {
     background-color: white;
     border: 2px solid black;
     position: relative;
-    overflow: hidden; /* Evitar desbordamiento horizontal en dispositivos pequeños */
-}
-
-/* Ajustes para pantallas más pequeñas */
-@media (max-width: 768px) {
-    #board {
-        width: 95%;
-    }
-
-    .ficha {
-        width: 50%;
-        height: 50%;
-        right: 25%;
-        top: 25%;
-    }
 }
 
 .red { background-color: red; }
@@ -69,8 +53,7 @@ button {
     border-radius: 50%;
     opacity: 0.8;
     position: absolute;
-    right: 15%; /* Ajuste hacia la derecha */
-    top: 15%; /* Ajuste hacia abajo */
+    transform: translate(-50%, -50%);
 }
 
 .red.ficha { background-color: rgba(255, 0, 0, 0.8); }
