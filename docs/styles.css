@@ -10,8 +10,10 @@ body {
 }
 
 #board {
-    width: 90vw; /* Ancho total del tablero ajustado */
-    height: 90vw; /* Alto total del tablero ajustado */
+    width: 70vw; /* Ancho ajustado */
+    height: 70vw; /* Alto ajustado */
+    max-width: 600px; /* Máximo ancho del tablero */
+    max-height: 600px; /* Máximo alto del tablero */
     display: grid;
     grid-template-columns: repeat(17, 1fr); /* 17 columnas */
     grid-template-rows: repeat(17, 1fr); /* 17 filas */
@@ -47,27 +49,11 @@ button {
     position: relative; /* Añadido para alinear correctamente las fichas */
 }
 
-.ficha {
-    width: 70%;
-    height: 70%;
-    border-radius: 50%;
-    opacity: 0.8;
-    position: absolute;
-    transform: translate(-50%, -50%);
-}
-
-.red.ficha { background-color: rgba(255, 0, 0, 0.8); }
-.green.ficha { background-color: rgba(0, 128, 0, 0.8); }
-.yellow.ficha { background-color: rgba(255, 255, 0, 0.8); }
-.blue.ficha { background-color: rgba(0, 0, 255, 0.8); }
-
-/* Cambiar color específico */
-#board > div:nth-child(17n+9),
-#board > div:nth-child(17n+10),
-#board > div:nth-child(17n+11),
-#board > div:nth-child(8*17+1):nth-last-child(-n+10*17) {
-    background-color: white !important; /* Cambia el color de fondo de las columnas y filas centrales a blanco */
-}
+/* Esquinas con colores */
+#board > div:nth-child(1) { background-color: yellow; }
+#board > div:nth-child(17) { background-color: blue; }
+#board > div:nth-child(273) { background-color: green; }
+#board > div:nth-child(289) { background-color: red; }
 
 /* Numerar casillas seguras */
 .safe::after {
