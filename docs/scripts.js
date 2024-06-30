@@ -37,38 +37,4 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
-
-    // Añadir fichas de cada jugador en sus casas
-    const players = ['red', 'green', 'yellow', 'blue'];
-    const startPositions = {
-        red: [250, 251, 267, 268],
-        green: [2, 3, 19, 20],
-        yellow: [225, 226, 242, 243],
-        blue: [39, 40, 56, 57]
-    };
-
-    players.forEach(player => {
-        startPositions[player].forEach(position => {
-            const ficha = document.createElement("div");
-            ficha.classList.add("ficha", player);
-            cells[position].appendChild(ficha);
-        });
-    });
-
-    // Numerar las casillas seguras
-    const safeCells = [
-        // Fila superior
-        7, 8, 9, 10, 11, 12, 13,
-        // Columna derecha
-        24, 41, 58, 75, 92, 109, 126,
-        // Fila inferior
-        135, 136, 137, 138, 139, 140, 141,
-        // Columna izquierda
-        118, 101, 84, 67, 50, 33, 16
-    ];
-
-    for (let i = 0; i < safeCells.length; i++) {
-        cells[safeCells[i]].classList.add("safe");
-        cells[safeCells[i]].setAttribute("data-number", i + 1);
-    }
 });
