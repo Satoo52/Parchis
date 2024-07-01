@@ -10,10 +10,8 @@ body {
 }
 
 #board {
-    width: 70vw; /* Ancho ajustado */
-    height: 70vw; /* Alto ajustado */
-    max-width: 600px; /* Máximo ancho del tablero */
-    max-height: 600px; /* Máximo alto del tablero */
+    width: 90vw; /* Ancho total del tablero ajustado */
+    height: 90vw; /* Alto total del tablero ajustado */
     display: grid;
     grid-template-columns: repeat(17, 1fr); /* 17 columnas */
     grid-template-rows: repeat(17, 1fr); /* 17 filas */
@@ -49,10 +47,11 @@ button {
     position: relative; /* Añadido para alinear correctamente las fichas */
 }
 
-/* Numerar casillas seguras */
 .safe::after {
     content: attr(data-number);
     position: absolute;
+    bottom: 2px;
+    right: 2px;
     font-size: 12px;
     color: black;
 }
