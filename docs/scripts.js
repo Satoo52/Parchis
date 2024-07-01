@@ -38,16 +38,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Numerar las casillas seguras según el orden especificado
-    const numberedSafeCells = [
-        280, 281, 264, 247, 230, 213, 196, 179, 162, 163, 164, 165, 166, 167, 168, 169,
-        152, 135, 134, 133, 132, 131, 130, 129, 128, 111, 94, 77, 60, 43, 26, 9, 8, 7,
-        24, 41, 58, 75, 92, 109, 126, 125, 124, 123, 122, 121, 120, 119, 136, 153, 154,
-        155, 156, 157, 158, 159, 160, 177, 194, 211, 228, 245, 262, 279
-    ];
+    // Añadir fichas de cada jugador en sus casas
+    const startPositions = {
+        yellow: [36, 38, 70, 72],
+        blue: [46, 48, 80, 82],
+        green: [206, 208, 240, 242],
+        red: [216, 218, 250, 252]
+    };
 
-    for (let i = 0; i < numberedSafeCells.length; i++) {
-        cells[numberedSafeCells[i]].classList.add("safe");
-        cells[numberedSafeCells[i]].setAttribute("data-number", i + 1);
-    }
+    Object.entries(startPositions).forEach(([color, positions]) => {
+        positions.forEach(position => {
+            const ficha = document.createElement("div");
+            ficha.classList.add("ficha", color);
+            ficha.style.backgroundColor = color;
+            cells[position].appendChild(ficha);
+        });
+    });
 });
