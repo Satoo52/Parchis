@@ -54,4 +54,18 @@ document.addEventListener("DOMContentLoaded", function() {
             cells[position].appendChild(ficha);
         });
     });
+
+    // Numerar las casillas seguras
+    const safeCells = [
+        280, 281, 264, 247, 230, 213, 196, 179, 162, 163, 164, 165, 166, 167, 168, 169,
+        152, 135, 134, 133, 132, 131, 130, 129, 128, 111, 94, 77, 60, 43, 26, 9,
+        8, 7, 24, 41, 58, 75, 92, 109, 126, 125, 124, 123, 122, 121, 120, 119,
+        136, 153, 154, 155, 156, 157, 158, 159, 160, 177, 194, 211, 228, 245, 262, 279
+    ];
+
+    safeCells.forEach((index, i) => {
+        const cell = cells[index];
+        cell.classList.add("safe");
+        cell.textContent = i + 1;
+    });
 });
