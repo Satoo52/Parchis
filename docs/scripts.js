@@ -37,21 +37,4 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     }
-
-    // Numerar las casillas seguras
-    const safeCells = [
-        // Fila superior
-        7, 8, 9, 10, 11, 12, 13,
-        // Columna derecha
-        24, 41, 58, 75, 92, 109, 126,
-        // Fila inferior
-        135, 136, 137, 138, 139, 140, 141,
-        // Columna izquierda
-        118, 101, 84, 67, 50, 33, 16
-    ];
-
-    for (let i = 0; i < safeCells.length; i++) {
-        cells[safeCells[i]].classList.add("safe");
-        cells[safeCells[i]].setAttribute("data-number", i + 1);
-    }
 });
