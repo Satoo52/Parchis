@@ -38,16 +38,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Numerar las casillas seguras en el perímetro de la zona central
-    const safeCells = [
-        137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, // Fila inferior
-        166, 185, 204, 223, 242, 261, // Columna derecha
-        260, 259, 258, 257, 256, 255, 254, 253, 252, 251, 250, 249, 248, // Fila superior
-        229, 210, 191, 172, 153, 134 // Columna izquierda
+    // Numerar las casillas seguras según el orden especificado
+    const numberedSafeCells = [
+        280, 281, 264, 247, 230, 213, 196, 179, 162, 163, 164, 165, 166, 167, 168, 169,
+        152, 135, 134, 133, 132, 131, 130, 129, 128, 111, 94, 77, 60, 43, 26, 9, 8, 7,
+        24, 41, 58, 75, 92, 109, 126, 125, 124, 123, 122, 121, 120, 119, 136, 153, 154,
+        155, 156, 157, 158, 159, 160, 177, 194, 211, 228, 245, 262, 279
     ];
 
-    for (let i = 0; i < safeCells.length; i++) {
-        cells[safeCells[i]].classList.add("safe");
-        cells[safeCells[i]].setAttribute("data-number", i + 1);
+    for (let i = 0; i < numberedSafeCells.length; i++) {
+        cells[numberedSafeCells[i]].classList.add("safe");
+        cells[numberedSafeCells[i]].setAttribute("data-number", i + 1);
     }
 });
