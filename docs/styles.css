@@ -49,18 +49,10 @@ button {
     position: relative; /* Añadido para alinear correctamente las fichas */
 }
 
-/* Esquinas con colores */
-#board > div:nth-child(1) { background-color: yellow; }
-#board > div:nth-child(17) { background-color: blue; }
-#board > div:nth-child(273) { background-color: green; }
-#board > div:nth-child(289) { background-color: red; }
-
 /* Numerar casillas seguras */
 .safe::after {
     content: attr(data-number);
     position: absolute;
-    bottom: 2px;
-    right: 2px;
     font-size: 12px;
     color: black;
 }
